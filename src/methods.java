@@ -32,10 +32,10 @@ public class methods {
         }
         return out;
     }
-    private static int count(String str, char c){
+    private static int count(String str, char c) {
         int out = 0;
-        for (int i = str.length() - 1; i >= 0; i--){
-            if( str.charAt(i) == '$' ) {
+        for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) == "c") {
                 out++;
             }
         }
@@ -54,5 +54,23 @@ public class methods {
         System.out.println(volume(10));
         System.out.println(volume(10));
 
+    }
+    public static String sjorovare(String str){
+        char match[] = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'z', 'x'};
+        String out = "";
+
+        for(int i = 0; i < str.length(); i++;)
+            for(int j=0; j<match.length; j++){
+                if(str.charAt(i) == match[j]){
+                    if(found){
+                        out += (str.charAt(i) + "o" + str.charAt(i));
+                    }
+                    else{
+                        out += str.charAt(i);
+                    }
+                }
+            }
+        }
+        return out;
     }
 }
